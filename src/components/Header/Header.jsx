@@ -1,0 +1,15 @@
+import React from 'react'
+import './Header.css'
+function Header() {
+  return (
+    <div className='header'>
+      <div className="header-contents">
+       <h2>Order your favourite food here</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente dolor aut unde tempora natus sint recusandae quo voluptatum ea. Id quo repudiandae, delectus </p>
+        <button>View Menu</button>
+      </div>
+    </div>
+  )
+}
+
+export default Header
