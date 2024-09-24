@@ -6,7 +6,7 @@ function Footer() {
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={assets.logo} alt=''/>
+            <img className="logo" src={assets.logo1} alt=''/>
             <p>Isit amet consectetur adipisicing. Aliquid minus laudantium debitis quibusdam commodi provident repellat, deserunt adipisci, consequatur ut a, eius nesciunt harum tenetur ratione aut nostrum dolor voluptates!</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
@@ -27,7 +27,7 @@ function Footer() {
                 <h2>GET IN TOUCH</h2>
                 <ul>
                     <li>+91 687239590</li>
-                    <li>contact@tomato.com</li>
+                    <li>contact@foodie.com</li>
                     <li></li>
                     <li></li>
                 </ul>
@@ -36,7 +36,7 @@ function Footer() {
                 
       </div>
       <hr/>
-      <p className='footer-copyright'>Copyright 2024</p>
+      <p className='footer-creator'>Created By Aravind Sasidharan</p>
     </div>
   )
 }

@@ -5,8 +5,8 @@ function Header() {
     <div className='header'>
       <div className="header-contents">
        <h2>Order your favourite food here</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente dolor aut unde tempora natus sint recusandae quo voluptatum ea. Id quo repudiandae, delectus </p>
-        <button>View Menu</button>
+        <p> Welcome to Foodie, your go-to destination for delicious, fresh meals delivered right to your door. Explore a variety of cuisines, customize your orders, and enjoy fast, hassle-free service with just a few clicks. </p>
+        
       </div>
     </div>
   )

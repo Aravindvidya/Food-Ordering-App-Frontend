@@ -29,14 +29,9 @@
     font-size:  2vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.header-contents button{
-    border: none;
-    color:rgb(140, 140, 179);
-    padding: 20px 30px;
-    font-weight: 400;
-    font-size: max(1vw, 13px);
-    border-radius: 50px;
-}
+
+    
+
 @media (max-width: 1050px) {
     .header-contents{
         max-width: 45%;
@@ -47,15 +42,11 @@
     .header-contents p{
        display: none;
     }
-    .header-contents button{
-        padding: 2vw 4vw;
-    }
+    
 }
 @media (max-width: 750px) { 
     .header-contents p{
        display: none;
     }
-    .header-contents button{
-        padding: 2vw 4vw;
-    }
+    
 }
