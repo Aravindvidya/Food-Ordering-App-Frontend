@@ -110,12 +110,12 @@ export const menu_list = [
         menu_image: menu_5
     },
     {
-        resturant_name:"Saravan Bhavan",
+        resturant_name:"Pure Veg World",
         menu_name:"Pure Veg",
         menu_image: menu_6
     },
     {
-        resturant_name:"Pasta Italiano",
+        resturant_name:"Pasta Italian",
         menu_name:"Pasta",
         menu_image: menu_7
     },
@@ -285,7 +285,7 @@ export const food_list = [
         category: "Pure Veg"
     }, {
         _id: "23",
-        name: "Mix Veg Pulao",
+        name: "Mix Veg",
         image: food_23,
         price: 100,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -329,7 +329,7 @@ export const food_list = [
         category: "Pasta"
     }, {
         _id: "29",
-        name: "Buttter Noodles",
+        name: "Butter Noodles",
         image: food_29,
         price: 140,
         description: "Food provides essential nutrients for overall health and well-being",
@@ -343,7 +343,7 @@ export const food_list = [
         category: "Noodles"
     }, {
         _id: "31",
-        name: "Somen Noodles",
+        name: "Ramen Noodles",
         image: food_31,
         price: 200,
         description: "Food provides essential nutrients for overall health and well-being",
