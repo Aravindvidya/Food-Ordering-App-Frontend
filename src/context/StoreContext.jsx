@@ -1,3 +1,4 @@
+
 import React, { createContext, useEffect, useState } from "react";
 //import { food_list } from "../assets/assets";
 import axios from "axios";
@@ -13,7 +14,7 @@ const StoreContextProvider = (props) => {
   const [food_list, setFoodList]= useState([])
 
   const addToCart =async(itemId) => {
-    if (!cartItems[itemId]) {
+    if (!cartItems ||!cartItems[itemId]) {
       setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
     } else {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))

@@ -1,57 +1,3 @@
-// import React, { useContext, useState, useEffect } from 'react'
-// import './MyOrders.css'
-// import axios from 'axios'
-// import { StoreContext } from '../../context/StoreContext';
-// import { assets } from '../../assets/assets';
-// const MyOrders = () => {
-  
-//     const{url,token}= useContext(StoreContext);
-//   const [data, setData] = useState([]);
-  
-//   const fetchOrders= async()=>{
-//     const response = await axios.post(url+"/api/order/userOrders",{},{headers:{token}});
-//     setData(response.data.data);
-//     console.log(response.data.data);
-//   }
-
-
-//   useEffect(()=>{
-//     if(token){
-//         fetchOrders();
-//     }
-//   },[token])
-
-//   return (
-//     <div className='my-orders'>
-//         <h2>My Orders</h2>
-//         <div className='container'>
-//             {data.map((order,index)=>{
-//                 return(
-//                     <div key={index} className='my-orders-order'>
-//                         <img src={assets} alt=""/>
-//                         <p>{order.items.map((item, index)=>{
-//                            if(index ===order.items.length-1){
-//                             return item.name+" X " + item.quantity
-//                            }else{
-//                             return item.name+" x "+ item.quantity + ","
-//                            }
-//                         })}</p>
-
-//                         <p>${order.amount}.00</p>
-//                         <p>Items:{order.items.length}</p>
-//                         <p><span>&#x25cf;</span><b>{order.status}</b></p>
-//                         <button onClick={fetchOrders}>Track Order</button>
-//                      </div>
-//                 )
-//             })}
-//         </div>
-      
-//     </div>
-//   )
-// }
-
-// export default MyOrders
-
 import React, { useContext } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
@@ -76,6 +22,55 @@ const Cart = () => {
         <br />
         <hr />
         {food_list.map((item, index) => {
+
+// // Store quantity in a variable
+// const itemQuantity = cartItems[item._id]; // New variable to hold the quantity
+
+// // Check if the item quantity is greater than 0
+// if (itemQuantity > 0) { 
+//   return (
+//     <div key={item._id} className='cart-items-item'> {/* Add key here */}
+//       <img src={`${url}/images/${item.image}`} alt="" />
+//       <p>{item.name}</p>
+//       <p>&#8360;{item.price}</p>
+//       <p>{itemQuantity}</p>
+//       <p>&#8360; {item.price * itemQuantity}</p>
+//       <p onClick={() => removeFromCart(item._id)} className='cross'>X</p>
+//       <hr />
+//     </div>
+//   );
+// }
+// return null; // Return null for items not in the cart to avoid undefined errors
+// })}
+// </div>
+// <div className='cart-bottom'>
+// <div className='cart-total'>
+// <h2>Cart Totals</h2>
+// <div>
+//   <div className="cart-total-details">
+//     <p>Subtotal</p>
+//     <p>&#8360; {getTotalCartAmount()}</p>
+//   </div>
+//   <hr />
+//   <div className="cart-total-details">
+//     <p>Delivery Fee</p>
+//     <p>&#8360; {getTotalCartAmount() === 0 ? 0 : 50}</p>
+//   </div>
+//   <hr />
+//   <div className="cart-total-details">
+//     <p>Total</p>
+//     <p>&#8360; {getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 50}</p>
+//   </div>
+// </div>
+// <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
+// </div>
+// </div>
+// </div>
+// );
+// };
+
+// export default Cart;
+
           if (cartItems[item._id] > 0) {
             return (
               <div>
@@ -91,6 +86,7 @@ const Cart = () => {
               </div>
             )
           }
+          return null;
         })}
       </div>
       <div className='cart-bottom'>

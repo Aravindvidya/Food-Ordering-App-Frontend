@@ -9,10 +9,14 @@ const MyOrders = () => {
   const [data, setData] = useState([]);
   
   const fetchOrders= async()=>{
+    try{
     const response = await axios.post(url+"/api/order/userOrders",{},{headers:{token}});
-    setData(response.data.data);
+    setData(response.data.data ||[]);
     console.log(response.data.data);
+  } catch (error) {
+    console.error("Error fetching orders:", error);
   }
+};
 
 
   useEffect(()=>{
@@ -37,7 +41,7 @@ const MyOrders = () => {
                            }
                         })}</p>
 
-                        <p>${order.amount}.00</p>
+                        <p>{order.amount}.00</p>
                         <p>Items:{order.items.length}</p>
                         <p><span>&#x25cf;</span><b>{order.status}</b></p>
                         <button onClick={fetchOrders}>Track Order</button>
